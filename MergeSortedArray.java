@@ -8,8 +8,8 @@ public class MergeSortedArray {
            // destroy the original order of nums1.
 
 
-           
-           int i = m - 1; // Pointer for the last element in the first m elements of nums1
+
+            int i = m - 1; // Pointer for the last element in the first m elements of nums1
             int j = n - 1; // Pointer for the last element in nums2
             int k = m + n - 1; // Pointer for the last position in nums1
             
@@ -36,3 +36,9 @@ public class MergeSortedArray {
         }
     }
 }
+
+
+/*
+Time Complexity: O(m+n)
+Space Complexity: O(1)
+ */
