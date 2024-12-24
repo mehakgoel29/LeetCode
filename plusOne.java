@@ -29,3 +29,5 @@ class Solution {
 }
 }
 
+/*Time Complexity: O(n), where  n is the length of the digits array.
+Space Complexity: O(n) in the worst case when a new array is created (when all digits are 9). */

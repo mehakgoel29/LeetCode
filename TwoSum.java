@@ -23,3 +23,8 @@ public class TwoSum {
     }
 }
 }
+
+/*
+Time Complexity: O(n), where n is the length of the nums array.
+Space Complexity: O(n), due to the HashMap storing up to n elements in the worst case.
+ */

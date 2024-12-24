@@ -12,3 +12,8 @@ public class RemoveDupFromSortedArr {
         }
         }
 }
+
+/*
+ * Time Complexity: O(n), where n is the length of the nums array.
+Space Complexity: O(1), since the algorithm uses a constant amount of extra space.
+ */
