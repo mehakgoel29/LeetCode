@@ -1,5 +1,4 @@
 public class BuySellStock {
-    class Solution {
         public int maxProfit(int[] prices) {
             int maxProfit = 0;
             int bestBuy=prices[0]; //this cannot be a selling day
@@ -14,7 +13,7 @@ public class BuySellStock {
         } 
         }
    
-}
+
 
 
 /*Time Complexity: O(n), where n is the length of the prices array.

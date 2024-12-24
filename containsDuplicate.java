@@ -1,10 +1,9 @@
 import java.util.HashMap;
 
 public class containsDuplicate {
-    class Solution {
 
         //method 1
-        public boolean containsDuplicate(int[] nums) {
+        public boolean containsDuplicate2(int[] nums) {
             for (int i = 0; i < nums.length; i++) {
                 int count = 0; 
                 for (int j = 0; j < nums.length; j++) {
@@ -18,11 +17,9 @@ public class containsDuplicate {
             }
             return false; 
         }
-        }
-    
 
-    //method 2 
-    public boolean containsDuplicate(int[] nums) {
+    //method 2
+    public boolean containsDuplicate1(int[] nums) {
          int n=nums.length;
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<nums.length;i++){
@@ -40,7 +37,8 @@ public class containsDuplicate {
         }
         return false;
     }
-    }
+}
+
 
 /*
  time complexity : o(n)

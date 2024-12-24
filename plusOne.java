@@ -1,5 +1,5 @@
-class Solution {
-    public int[] plusOne(int[] digits) {
+public class plusOne{
+    public int[] plusOnecal(int[] digits) {
     int n = digits.length;
     for(int i=digits.length-1;i>=0;i--){
         if(digits[i]<=8){
@@ -26,8 +26,7 @@ class Solution {
         return digits;
     }
     
-}
-}
+}}
 
 /*Time Complexity: O(n), where  n is the length of the digits array.
 Space Complexity: O(n) in the worst case when a new array is created (when all digits are 9). */

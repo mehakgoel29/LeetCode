@@ -2,8 +2,8 @@ import java.util.HashMap;
 
 public class majorityElement {
     //leetcode question 169
-    class Solution {
-        public int majorityElement(int[] nums) {
+
+        public int majorityElement1(int[] nums) {
             int n = nums.length;
             
             // Outer loop to consider each element as a potential majority element
@@ -24,9 +24,29 @@ public class majorityElement {
             }
             return -1; 
         }
-    }
-    
+
+    public int majorityElement2(int[] nums) {
+        int n=nums.length;
+        HashMap<Integer,Integer> map=new HashMap<>();
+     for(int i=0;i<nums.length;i++){
+            if(map.containsKey(nums[i])){
+                map.put(nums[i],map.get(nums[i])+1);
+            }
+            else{
+                map.put(nums[i],1);
+            }
+        }
+        for(int key:map.keySet()){
+            if(map.get(key)>n/2){
+                return key;
+            }
+        }
+        return -1;
+
 }
+}
+    
+
 
 
 /*
@@ -45,23 +65,3 @@ Space Complexity: O(1) */
  time complexity : o(n)
  space complexity : o(n)
  */
-class Solution {
-    public int majorityElement(int[] nums) {
-        int n=nums.length;
-        HashMap<Integer,Integer> map=new HashMap<>();
-     for(int i=0;i<nums.length;i++){
-            if(map.containsKey(nums[i])){
-                map.put(nums[i],map.get(nums[i])+1);
-            }
-            else{
-                map.put(nums[i],1);
-            }
-        }
-        for(int key:map.keySet()){
-            if(map.get(key)>n/2){
-                return key;
-            }
-        }
-        return -1;
-    }
-}

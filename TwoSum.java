@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class TwoSum {
-    class Solution {
+
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -22,7 +22,7 @@ public class TwoSum {
         return new int[] {};
     }
 }
-}
+
 
 /*
 Time Complexity: O(n), where n is the length of the nums array.

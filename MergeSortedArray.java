@@ -1,5 +1,5 @@
 public class MergeSortedArray {
-    class Solution {
+
         public void merge(int[] nums1, int m, int[] nums2, int n) {
 
            //If you iterate from the beginning (index 0) of nums1 and nums2,
@@ -35,7 +35,7 @@ public class MergeSortedArray {
             // No need to copy remaining elements from nums1 because they are already in place
         }
     }
-}
+
 
 
 /*
