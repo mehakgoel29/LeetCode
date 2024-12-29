@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class SummaryRanges {
-    public List<String> summaryRanges(int[] nums) {
+    public List<String> Ranges(int[] nums) {
         ArrayList<String> list=new ArrayList<>();
         int n=nums.length;
         for(int i=0; i<n;i++){
