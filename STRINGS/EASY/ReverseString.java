@@ -1,3 +1,5 @@
+package EASY;
+
 public class ReverseString {
 
         public String reverseWords(String s) {

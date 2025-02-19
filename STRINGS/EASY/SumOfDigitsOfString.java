@@ -1,3 +1,5 @@
+package EASY;
+
 public class SumOfDigitsOfString {
     public int getLucky(String s, int k) {
         int sum = 0;

@@ -1,3 +1,5 @@
+package EASY;
+
 public class FirstIndexOfFirstOccurrence {
     public int strStrEasy(String haystack, String needle) {
         return haystack.indexOf(needle);

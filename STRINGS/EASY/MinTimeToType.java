@@ -1,3 +1,5 @@
+package EASY;
+
 public class MinTimeToType {
     public int minTimeToType(String word) {
         int time = 0;

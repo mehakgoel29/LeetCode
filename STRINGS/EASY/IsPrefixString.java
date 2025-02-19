@@ -1,3 +1,5 @@
+package EASY;
+
 public class IsPrefixString {
     public boolean isPrefixString(String s, String[] words) {
         StringBuilder sb=new StringBuilder();

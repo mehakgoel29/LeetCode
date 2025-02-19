@@ -1,3 +1,5 @@
+package EASY;
+
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
         String[] words=s.trim().split("\\s+");
