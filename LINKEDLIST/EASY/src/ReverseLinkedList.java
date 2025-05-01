@@ -2,16 +2,15 @@ public class ReverseLinkedList {
     public static class Node {
         int value;
         Node next;
-
         public Node(int value) {
             this.value = value;
         }
-
         public Node(int value, Node next) {
             this.value = value;
             this.next = next;
         }
     }
+
     static Node head;
     static Node prev = null;
     static Node next;
@@ -50,5 +49,4 @@ public class ReverseLinkedList {
         ReverseList();   // Reverse the list using iteration
         display();       // Display reversed list
     }
-
 }
