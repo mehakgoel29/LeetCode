@@ -36,6 +36,14 @@ public class FlattenLinkedList {
     }
 
     // Approach 2: Optimal — Recursive merge
+    // Time Complexity: O(n log k)
+    //      - n = total number of nodes in the entire structure
+    //      - k = number of top-level linked lists (nodes connected via 'next')
+    //      - At each level, two sorted lists are merged (merge takes O(n) over all)
+    //      - log k levels of merging (divide and conquer style like merge sort)
+    //
+    // Space Complexity: O(1) auxiliary (in-place merge)
+
     public ListNode flattenLinkedList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
