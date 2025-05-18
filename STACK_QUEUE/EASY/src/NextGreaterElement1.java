@@ -48,41 +48,39 @@ public class NextGreaterElement1 {
         // Space Complexity: O(m + n) for stack, hashmap, and result array
 
 
-        public int[] nextGreaterElementOptimal(int[] nums1, int[] nums2) {
-            HashMap<Integer, Integer> map = new HashMap<>(); // O(m)
-            Stack<Integer> stack = new Stack<>(); // O(m)
+    public int[] nextGreaterElementOptimal(int[] nums1, int[] nums2) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Stack<Integer> stack = new Stack<>();
 
-            // Step 1: Build map of next greater elements for nums2
-            for (int i = nums2.length - 1; i >= 0; i--) {
-                int num = nums2[i];
-                while (!stack.isEmpty() && stack.peek() <= num) {
-                    stack.pop();
-                }
-                // If stack is not empty, then the top is the next greater element
-                if (!stack.isEmpty()) {
-                    map.put(num, stack.peek());
-                } else {
-                    map.put(num, -1); // Or any default value indicating no greater element
-                }
-                stack.push(num);
-            }
-            // Step 2: For remaining elements in stack, no greater element exists
-            while (!stack.isEmpty()) {
-                map.put(stack.pop(), -1);
+        // Step 1: Build map of next greater elements for nums2
+        for (int i = nums2.length - 1; i >= 0; i--) {
+            int num = nums2[i];
+            while (!stack.isEmpty() && stack.peek() <= num) {
+                stack.pop();
             }
 
-            // Step 3: Build result for nums1 using the map
-            int[] res = new int[nums1.length]; // O(n)
-            for (int i = 0; i < nums1.length; i++) {
-                res[i] = map.get(nums1[i]);
+            if (!stack.isEmpty()) {
+                map.put(num, stack.peek());
+            } else {
+                map.put(num, -1);
             }
 
-            return res;
+            stack.push(num);
         }
 
+        // Step 2: Use map to build result for nums1
+        int[] res = new int[nums1.length];
+        for (int i = 0; i < nums1.length; i++) {
+            res[i] = map.get(nums1[i]);
+        }
+
+        return res;
+    }
 
 
-        // when only one array is given
+
+
+    // when only one array is given
         public int[] nextGreaterElementOptimal(int[] arr) {
         Stack<Integer> s= new Stack<>();
         int[] res=new int[arr.length];
