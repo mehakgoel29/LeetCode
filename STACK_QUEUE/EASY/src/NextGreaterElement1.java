@@ -48,10 +48,6 @@ public class NextGreaterElement1 {
         // Space Complexity: O(m + n) for stack, hashmap, and result array
 
 
-         // algo:
-        //if greater ... pop and map
-        //else push
-
         public int[] nextGreaterElementOptimal(int[] nums1, int[] nums2) {
             HashMap<Integer, Integer> map = new HashMap<>(); // O(m)
             Stack<Integer> stack = new Stack<>(); // O(m)
